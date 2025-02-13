@@ -1,0 +1,8 @@
+export const galleryImages = [
+  "https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/448059467_1025896976209243_5608868048098634315_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=royU1AeDpPoQ7kNvgEj-yjy&_nc_zt=23&_nc_ht=scontent-dfw5-1.xx&_nc_gid=APrnq6iGst9iXeM_fHZ765S&oh=00_AYB8VvPM8yURfih2Lk8ge3f3WhVobJxZBq1P5_HxN784lg&oe=6773C315",
+  "https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/447961396_1025896922875915_7955797082380820869_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=T6Qto5mmnswQ7kNvgG-uiww&_nc_zt=23&_nc_ht=scontent-dfw5-2.xx&_nc_gid=An8ZyywKQSqP4kC4R7c7mWS&oh=00_AYA7CL8DjBdlQHI31qYTpARGFB73k20Jv2QXq0qHWWPs6w&oe=6773DD5C",
+  "https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/447960674_1025896892875918_8653580098761544495_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=HQFT1V3hNMAQ7kNvgGriNUV&_nc_zt=23&_nc_ht=scontent-dfw5-2.xx&_nc_gid=A2oIq1Roy1gOrjTM11lo37r&oh=00_AYBIKPx9ZA9vm47FhV-o-pZAl2gr-ZPNvvkplFoIK7yO6g&oe=6773DC31",
+  "https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/442425622_1005394748259466_5648818921983724608_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=zxNRZjvViegQ7kNvgHTJTQu&_nc_zt=23&_nc_ht=scontent-dfw5-1.xx&_nc_gid=AvjIwmVjIoE95lt3tBzKs4x&oh=00_AYClBIVXwo58lhHbC-Hwn56E2SDdEcf1k4t8NK3NuJcFXA&oe=6773E126",
+  "https://d2zdpiztbgorvt.cloudfront.net/region1/us/533995/inspiration/846621ded9164524a67bb2b10958a4-pedro-s-barbershop-inspiration-08f0e050f73545efb081c60ec8c3b9-booksy.jpeg?size=1170x1170",
+  "https://d2zdpiztbgorvt.cloudfront.net/region1/us/533995/inspiration/1b8646a60bdb428f8c0a29d8b2ab25-pedro-s-barbershop-inspiration-828ff87b881b4370b3d2c3abef2a0b-booksy.jpeg?size=1170x1170"
+];

@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Black Freedom';
+  src: url('https://cdn.fontspace.com/b/l/b3JpZ2luYWwvZi85Ny8xNjE5NzIzMjQ5OTcyL2JsYWNrLWZyZWVkb20udHRm.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1, h2, h3 {
+    font-family: 'Black Freedom', cursive;
+  }
+}
