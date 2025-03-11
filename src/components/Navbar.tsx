@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Scissors, Menu, X, ChevronLeft, ChevronRight, Home, Scissors as Cut, Image, Star } from 'lucide-react';
+import { Menu, X, ChevronLeft, ChevronRight, Home, Image, Star, Users } from 'lucide-react';
+import { Clippers } from './icons/Clippers';
 import MobileMenu from './MobileMenu';
 
 interface NavbarProps {
@@ -18,11 +19,11 @@ export default function Navbar({ isOpen, onToggle }: NavbarProps) {
   return (
     <>
       {/* Mobile Header */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 bg-dark/90 z-50 border-b-2 border-pr-red">
+      <div className="lg:hidden fixed top-0 left-0 right-0 bg-marble z-50 border-b-2 border-pr-red">
         <div className="px-4 py-4 flex items-center justify-between">
           <NavLink to="/" className="flex items-center space-x-2">
-            <Scissors className="w-8 h-8 text-pr-red" />
-            <span className="text-pr-white text-2xl font-black-freedom truncate">Pedro's Barbershop</span>
+            <Clippers className="w-8 h-8 text-pr-red" />
+            <span className="text-pr-white text-2xl font-black-freedom nav-text truncate">Pedro's Barbershop</span>
           </NavLink>
           <button
             className="text-pr-white hover:text-pr-red transition duration-300"
@@ -38,14 +39,14 @@ export default function Navbar({ isOpen, onToggle }: NavbarProps) {
       </div>
 
       {/* Desktop Vertical Navbar */}
-      <nav className={`hidden lg:flex fixed left-0 top-0 h-screen bg-dark/90 border-r-2 border-pr-red z-50 transition-[width] duration-300 ${isOpen ? 'w-64' : 'w-16'}`}>
+      <nav className={`hidden lg:flex fixed left-0 top-0 h-screen bg-marble border-r-2 border-pr-red z-50 transition-[width] duration-300 ${isOpen ? 'w-64' : 'w-16'}`}>
         <div className="flex flex-col w-full">
           <div className="flex items-center p-4 border-b-2 border-pr-red relative">
             <NavLink to="/" className="flex items-center">
-              <Scissors className="w-8 h-8 text-pr-red" />
+              <Clippers className="w-8 h-8 text-pr-red" />
               <div className={`ml-2 ${isOpen ? 'w-auto visible' : 'w-0 invisible'} overflow-hidden whitespace-nowrap`}>
-                <span className="text-pr-white text-2xl font-black-freedom block leading-tight">Pedro's</span>
-                <span className="text-pr-white text-2xl font-black-freedom block leading-tight">Barbershop</span>
+                <span className="text-pr-white text-2xl font-black-freedom nav-text block leading-tight">Pedro's</span>
+                <span className="text-pr-white text-2xl font-black-freedom nav-text block leading-tight">Barbershop</span>
               </div>
             </NavLink>
             <button
@@ -64,7 +65,7 @@ export default function Navbar({ isOpen, onToggle }: NavbarProps) {
             <NavLink 
               to="/" 
               className={({ isActive }) => 
-                `text-pr-white hover:text-pr-red transition duration-300 font-black-freedom text-xl flex items-center ${isActive ? 'text-pr-red' : ''}`
+                `text-pr-white hover:text-pr-red transition duration-300 font-black-freedom nav-text text-xl flex items-center ${isActive ? 'text-pr-red' : ''}`
               }
             >
               <Home className={`w-6 h-6 ${!isOpen ? 'mx-auto' : 'mr-3'}`} />
@@ -73,12 +74,23 @@ export default function Navbar({ isOpen, onToggle }: NavbarProps) {
               </span>
             </NavLink>
             <NavLink 
-              to="/services" 
+              to="/barbers" 
               className={({ isActive }) => 
-                `text-pr-white hover:text-pr-red transition duration-300 font-black-freedom text-xl flex items-center ${isActive ? 'text-pr-red' : ''}`
+                `text-pr-white hover:text-pr-red transition duration-300 font-black-freedom nav-text text-xl flex items-center ${isActive ? 'text-pr-red' : ''}`
               }
             >
-              <Cut className={`w-6 h-6 ${!isOpen ? 'mx-auto' : 'mr-3'}`} />
+              <Users className={`w-6 h-6 ${!isOpen ? 'mx-auto' : 'mr-3'}`} />
+              <span className={`${isOpen ? 'w-auto visible' : 'w-0 invisible'} overflow-hidden whitespace-nowrap`}>
+                Barbers
+              </span>
+            </NavLink>
+            <NavLink 
+              to="/services" 
+              className={({ isActive }) => 
+                `text-pr-white hover:text-pr-red transition duration-300 font-black-freedom nav-text text-xl flex items-center ${isActive ? 'text-pr-red' : ''}`
+              }
+            >
+              <Clippers className={`w-6 h-6 ${!isOpen ? 'mx-auto' : 'mr-3'}`} />
               <span className={`${isOpen ? 'w-auto visible' : 'w-0 invisible'} overflow-hidden whitespace-nowrap`}>
                 Services
               </span>
@@ -86,7 +98,7 @@ export default function Navbar({ isOpen, onToggle }: NavbarProps) {
             <NavLink 
               to="/gallery" 
               className={({ isActive }) => 
-                `text-pr-white hover:text-pr-red transition duration-300 font-black-freedom text-xl flex items-center ${isActive ? 'text-pr-red' : ''}`
+                `text-pr-white hover:text-pr-red transition duration-300 font-black-freedom nav-text text-xl flex items-center ${isActive ? 'text-pr-red' : ''}`
               }
             >
               <Image className={`w-6 h-6 ${!isOpen ? 'mx-auto' : 'mr-3'}`} />
@@ -95,14 +107,14 @@ export default function Navbar({ isOpen, onToggle }: NavbarProps) {
               </span>
             </NavLink>
             <NavLink 
-              to="/reviews" 
+              to="/about" 
               className={({ isActive }) => 
-                `text-pr-white hover:text-pr-red transition duration-300 font-black-freedom text-xl flex items-center ${isActive ? 'text-pr-red' : ''}`
+                `text-pr-white hover:text-pr-red transition duration-300 font-black-freedom nav-text text-xl flex items-center ${isActive ? 'text-pr-red' : ''}`
               }
             >
-              <Star className={`w-6 h-6 ${!isOpen ? 'mx-auto' : 'mr-3'}`} />
+              <Users className={`w-6 h-6 ${!isOpen ? 'mx-auto' : 'mr-3'}`} />
               <span className={`${isOpen ? 'w-auto visible' : 'w-0 invisible'} overflow-hidden whitespace-nowrap`}>
-                Reviews
+                About Us
               </span>
             </NavLink>
           </div>

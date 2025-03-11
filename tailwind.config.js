@@ -7,11 +7,12 @@ export default {
         'pr-red': '#ED0000',
         'pr-blue': '#0050F0',
         'pr-white': '#FFFFFF',
-        'dark': '#000000',
+        'dark': '#1a1a1a',
         'card': '#111827',
       },
       fontFamily: {
         'black-freedom': ['Black Freedom', 'cursive'],
+        'american-typewriter': ['American Typewriter', 'serif'],
       },
     },
   },

@@ -9,7 +9,7 @@ export default function Footer() {
   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
 
   return (
-    <footer className="bg-black text-white py-8">
+    <footer className="bg-marble text-white py-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center space-y-6 lg:space-y-0">
           {/* Contact Info */}
@@ -58,7 +58,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-6 pt-6 text-center">
+        <div className="border-t border-pr-red/20 mt-6 pt-6 text-center">
           <p>&copy; 2024 Pedro's Barbershop. All rights reserved.</p>
         </div>
       </div>
