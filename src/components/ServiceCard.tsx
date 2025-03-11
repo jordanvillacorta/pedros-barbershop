@@ -17,13 +17,15 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
   const variants = {
     hidden: { 
       opacity: 0,
-      y: 20
+      x: window.innerWidth < 768 ? (index % 2 === 0 ? -50 : 50) : 0,
+      y: window.innerWidth >= 768 ? 20 : 0
     },
     visible: {
       opacity: 1,
+      x: 0,
       y: 0,
       transition: {
-        duration: 0.3,
+        duration: 0.5,
         ease: "easeInOut",
         delay: index * 0.05
       }
@@ -36,6 +38,7 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
       variants={variants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
+      viewport={{ once: true, margin: "-50px" }}
       className="bg-card rounded-lg p-4 text-center lg:hover:scale-105 transition duration-300 border border-pr-white/20"
     >
         <div className="flex justify-center text-pr-red mb-2">
