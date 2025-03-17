@@ -17,7 +17,7 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold text-pr-white mb-6">Our Services</h2>
+          <h2 className="text-4xl font-bold text-pr-white mb-6 font-black-freedom">Our Services</h2>
           <motion.a 
             href="/barbers"
             className="inline-block bg-pr-red text-pr-white px-8 py-3 rounded-lg font-semibold hover:bg-pr-blue transition-colors duration-300"

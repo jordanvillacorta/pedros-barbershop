@@ -19,8 +19,8 @@ export default function Navbar({ isOpen, onToggle }: NavbarProps) {
   return (
     <>
       {/* Mobile Header */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 bg-marble z-50 border-b-2 border-pr-red">
-        <div className="px-4 py-4 flex items-center justify-between">
+      <div className="lg:hidden fixed top-0 left-0 right-0 bg-[#004687] z-50 border-b-2 border-pr-white">
+        <div className="px-4 py-6 flex items-center justify-between">
           <NavLink to="/" className="flex items-center space-x-2">
             <Clippers className="w-8 h-8 text-pr-red" />
             <span className="text-pr-white text-2xl font-black-freedom nav-text truncate">Pedro's Barbershop</span>

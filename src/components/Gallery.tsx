@@ -70,7 +70,7 @@ export default function Gallery() {
   return (
     <section className="py-20 bg-marble">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-white mb-12">Our Work</h2>
+        <h2 className="text-4xl font-bold text-center text-white mb-12 font-black-freedom">Our Work</h2>
         
         <div className="flex justify-center mb-8">
           <div className="relative w-48">
