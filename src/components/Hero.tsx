@@ -5,10 +5,9 @@ import { getImageUrl } from '../utils/images';
 import ScrollReveal from './animations/ScrollReveal';
 import ParallaxSection from './animations/ParallaxSection';
 
-
 export default function Hero() {
   const heroImage = "https://d2zdpiztbgorvt.cloudfront.net/region1/us/533995/biz_photo/3376f71fa1ca4e5987abe82454834c-pedro-s-barbershop-biz-photo-f08a7cf45e5549a8b2e8083daa4dd6-booksy.jpeg";
-  const logoImage = "https://d2zdpiztbgorvt.cloudfront.net/region1/us/533995/logo/a6335cb701b346d9a96adfdafd0a51-pedro-s-barbershop-logo-7f2d6777d972410992271a5e2643c9-booksy.jpeg";
+  const logoImage = "https://github.com/jordanvillacorta/pedros-barbershop/blob/master/images/pedro_20250305_072749_482%202.jpeg?raw=true";
 
   return (
     <motion.div 
@@ -28,12 +27,12 @@ export default function Hero() {
           <img 
             src={getImageUrl(logoImage, 150)}
             srcSet={`
-              ${getImageUrl(logoImage, 150)} 150w,
-              ${getImageUrl(logoImage, 300)} 300w
+              ${getImageUrl(logoImage, 200)} 200w,
+              ${getImageUrl(logoImage, 400)} 400w
             `}
-            sizes="150px"
-            alt="Pedro's Barbershop Logo"
-            className="w-32 h-32 mb-6 rounded-full border-4 border-pr-red"
+            sizes="200px"
+            alt="Pedro's Barbershop Logo" 
+            className="w-40 h-40 md:w-48 md:h-48 mb-6 rounded-full border-4 border-pr-red"
             loading="eager"
           />
         </ScrollReveal>

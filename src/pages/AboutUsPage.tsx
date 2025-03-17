@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, Award, Users, Scissors } from 'lucide-react';
-import { useInView } from 'react-intersection-observer';
+import { Calendar, Award, Users, Scissors, Trophy } from 'lucide-react';
 import ScrollReveal from '../components/animations/ScrollReveal';
 
 const timelineEvents = [
@@ -12,15 +11,27 @@ const timelineEvents = [
     icon: <Scissors />
   },
   {
-    year: '2019',
+    year: '2016 - Present',
     title: 'Community Recognition',
-    description: 'Recognized as one of the top-rated barbershops in Johnson County.',
+    description: 'Recognized as one of the top-rated barbershops in Johnson County. Served the Olathe school district by giving free haircuts for Back to School.',
     icon: <Award />
   },
   {
-    year: '2021',
+    year: '2017 - 2018',
+    title: 'Sponsorship',
+    description: 'Pedro\'s Barbershop sponsored Blue Valley Northwest High School. Barbershop banner was located in school stadiums and on jerseys.',
+    icon: <Trophy />
+  },
+  {
+    year: '2019 - 2023',
+    title: 'Community Give Back',
+    description: 'Pedro\'s Barbershop went to City Center Church and provided free haircuts to the community.',
+    icon: <Award />
+  },
+  {
+    year: '2022',
     title: 'Team Expansion',
-    description: 'Welcomed talented barbers to meet growing demand while maintaining our high standards.',
+    description: 'Welcomed talented barbers, notably Jesus Silva, to meet growing demand while maintaining our high standards.',
     icon: <Users />
   },
   {
@@ -57,7 +68,7 @@ export default function AboutUsPage() {
             <ScrollReveal variant="slide" className="relative">
               <div className="aspect-square overflow-hidden rounded-lg border-4 border-pr-red">
                 <img
-                  src="https://github.com/jordanvillacorta/pedros-barbershop/blob/master/images/pedro_hs.JPG?raw=true"
+                  src="https://github.com/jordanvillacorta/pedros-barbershop/blob/master/images/pedro_about_us.JPG?raw=true"
                   alt="Pedro Angel"
                   className="w-full h-full object-cover"
                 />
@@ -121,11 +132,6 @@ export default function AboutUsPage() {
             {/* Timeline Events */}
             <div className="space-y-20">
               {timelineEvents.map((event, index) => {
-                const [ref, inView] = useInView({
-                  threshold: 0.2,
-                  triggerOnce: true
-                });
-
                 return (
                 <div
                   key={index}
@@ -138,11 +144,11 @@ export default function AboutUsPage() {
                     {event.icon}
                   </div>
                   <motion.div 
-                    ref={ref}
                     className="flex-1 w-full md:w-auto"
                     variants={cardVariants}
                     initial="hidden"
-                    animate={inView ? "visible" : "hidden"}
+                    whileInView="visible"
+                    viewport={{ once: true, threshold: 0.2 }}
                     custom={index % 2 === 0}
                   >
                     <div className={`bg-card p-6 rounded-lg shadow-lg mx-4 ${

@@ -12,7 +12,7 @@ export default {
       },
       fontFamily: {
         'black-freedom': ['Black Freedom', 'cursive'],
-        'american-typewriter': ['American Typewriter', 'serif'],
+        'american-typewriter': ['American Typewriter', 'serif', 'system-ui'],
       },
     },
   },

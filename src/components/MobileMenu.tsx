@@ -51,7 +51,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             animate="open"
             exit="closed"
           >
-            <div className="flex flex-col space-y-6 mt-16">
+            <div className="flex flex-col space-y-6 mt-20">
           <NavLink 
             to="/" 
             onClick={handleLinkClick}
