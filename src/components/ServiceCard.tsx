@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 import { ServiceType } from '../types/service';
 
 interface ServiceCardProps {
@@ -9,45 +8,52 @@ interface ServiceCardProps {
 }
 
 export default function ServiceCard({ service, index }: ServiceCardProps) {
-  const [ref, inView] = useInView({
-    threshold: 0.1,
-    triggerOnce: true
-  });
-
   const variants = {
     hidden: { 
       opacity: 0,
-      x: window.innerWidth < 768 ? (index % 2 === 0 ? -50 : 50) : 0,
-      y: window.innerWidth >= 768 ? 20 : 0
+      y: 20,
+      scale: 0.95
     },
     visible: {
       opacity: 1,
-      x: 0,
       y: 0,
+      scale: 1,
       transition: {
-        duration: 0.5,
-        ease: "easeInOut",
-        delay: index * 0.05
+        type: "spring",
+        stiffness: 100,
+        damping: 15,
+        delay: index * 0.1
       }
     }
   };
 
   return (
     <motion.div
-      ref={ref}
       variants={variants}
       initial="hidden"
-      animate={inView ? "visible" : "hidden"}
-      viewport={{ once: true, margin: "-50px" }}
-      className="bg-card rounded-lg p-4 text-center lg:hover:scale-105 transition duration-300 border border-pr-white/20"
+      whileInView="visible"
+      role="article"
+      aria-labelledby={`service-${index}`}
+      viewport={{ once: true, margin: "-50px", amount: 0.3 }}
+      whileHover={{ 
+        scale: 1.02,
+        transition: { type: "spring", stiffness: 400, damping: 10 }
+      }}
+      className="bg-[#004687] rounded-lg p-4 text-center border border-pr-white/20 shadow-lg"
     >
         <div className="flex justify-center text-pr-red mb-2">
-          {service.icon}
+          <motion.div
+            initial={{ rotate: 0 }}
+            whileHover={{ rotate: 180 }}
+            transition={{ duration: 0.3 }}
+          >
+            {service.icon}
+          </motion.div>
         </div>
-        <h3 className="text-base font-bold text-pr-white mb-1">{service.name}</h3>
+        <h3 id={`service-${index}`} className="text-2xl font-bold text-pr-white mb-1 font-['Proxima_Nova']">{service.name}</h3>
         <p className="text-gray-400 text-xs mb-2">{service.description}</p>
-        <div className="text-pr-red font-bold text-lg mb-0.5">{service.price}</div>
-        <span className="text-gray-500">{service.duration}</span>
+        <div className="text-pr-white font-bold text-base mb-0.5" aria-label={`Price: ${service.price}`}>{service.price}</div>
+        <span className="text-pr-red">{service.duration}</span>
     </motion.div>
   );
 }

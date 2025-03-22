@@ -6,49 +6,54 @@ import ScrollReveal from './animations/ScrollReveal';
 import ParallaxSection from './animations/ParallaxSection';
 
 export default function Hero() {
-  const heroImage = "https://d2zdpiztbgorvt.cloudfront.net/region1/us/533995/biz_photo/3376f71fa1ca4e5987abe82454834c-pedro-s-barbershop-biz-photo-f08a7cf45e5549a8b2e8083daa4dd6-booksy.jpeg";
-  const logoImage = "https://github.com/jordanvillacorta/pedros-barbershop/blob/master/images/pedro_20250305_072749_482%202.jpeg?raw=true";
+  const heroImage =
+    'https://d2zdpiztbgorvt.cloudfront.net/region1/us/533995/biz_photo/3376f71fa1ca4e5987abe82454834c-pedro-s-barbershop-biz-photo-f08a7cf45e5549a8b2e8083daa4dd6-booksy.jpeg';
+  const logoImage =
+    'https://github.com/jordanvillacorta/pedros-barbershop/blob/master/images/pedro_20250305_072749_482%202.jpeg?raw=true';
 
   return (
-    <motion.div 
+    <motion.div
       className="relative min-h-screen"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('${getImageUrl(heroImage, 1920)}')`
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('${getImageUrl(
+            heroImage,
+            1920
+          )}')`,
         }}
       />
       <ParallaxSection className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-4 pt-16">
         <ScrollReveal variant="scale" delay={0.2}>
-          <img 
+          <img
             src={getImageUrl(logoImage, 150)}
             srcSet={`
               ${getImageUrl(logoImage, 200)} 200w,
               ${getImageUrl(logoImage, 400)} 400w
             `}
             sizes="200px"
-            alt="Pedro's Barbershop Logo" 
+            alt="Pedro's Barbershop Logo"
             className="w-40 h-40 md:w-48 md:h-48 mb-6 rounded-full border-4 border-pr-red"
             loading="eager"
           />
         </ScrollReveal>
-        
+
         <ScrollReveal variant="slide" delay={0.4}>
-          <h1 className="text-5xl md:text-7xl font-bold text-pr-white mb-4 md:font-black-freedom">
+          <h1 className="text-5xl md:text-7xl font-bold text-pr-white mb-4 font-peristiwa">
             Pedro's Barbershop
           </h1>
         </ScrollReveal>
-        
+
         <ScrollReveal variant="fade" delay={0.6}>
           <p className="text-xl md:text-2xl text-gray-300 mb-8">
             Premier Barbershop in Olathe, KS
           </p>
         </ScrollReveal>
-        
+
         <ScrollReveal variant="slide" delay={0.8}>
           <motion.a
             href="/barbers"

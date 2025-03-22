@@ -46,7 +46,7 @@ export default function BarberCard({ barber, index }: BarberCardProps) {
         />
       </div>
       <div className="p-6">
-        <h3 className="text-3xl text-pr-white mb-1">{barber.name}</h3>
+        <h2 className="text-3xl text-pr-white mb-1 font-peristiwa">{barber.name}</h2>
         <p className="text-pr-red mb-4">{barber.title}</p>
         <motion.p
           initial={{ opacity: 0, x: -20 }}
