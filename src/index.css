@@ -1,15 +1,15 @@
 @font-face {
-  font-family: 'Black Freedom';
-  src: url('https://cdn.fontspace.com/b/l/b3JpZ2luYWwvZi85Ny8xNjE5NzIzMjQ5OTcyL2JsYWNrLWZyZWVkb20udHRm.ttf') format('truetype');
+  font-family: 'Peristiwa';
+  src: url('/fonts/Peristiwa.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'American Typewriter';
-  src: url('https://db.onlinewebfonts.com/t/6b50e8d094717e60ff0d2f2e0c3b9731.woff2') format('woff2');
-  font-weight: normal;
+  font-family: 'Proxima Nova';
+  src: url('/fonts/proximanova_light.otf') format('opentype');
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
@@ -21,52 +21,58 @@
 @layer utilities {
   .bg-marble {
     background-color: rgba(0, 0, 0, 0.85);
-    background-image:
-      url('https://plus.unsplash.com/premium_photo-1706838707540-61bbe9475dd3?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
+    background-image: url('https://plus.unsplash.com/premium_photo-1706838707540-61bbe9475dd3?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
       linear-gradient(30deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
       linear-gradient(150deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
       linear-gradient(30deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
       linear-gradient(150deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
       linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0px, transparent 1px),
       radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-    background-size: cover, 40px 40px, 40px 40px, 20px 20px, 20px 20px, 20px 20px, 30px 30px;
+    background-size: cover, 40px 40px, 40px 40px, 20px 20px, 20px 20px,
+      20px 20px, 30px 30px;
     background-position: center, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
     background-attachment: fixed, scroll, scroll, scroll, scroll, scroll, scroll;
-    background-blend-mode: overlay, normal, normal, normal, normal, normal, normal;
+    background-blend-mode: overlay, normal, normal, normal, normal, normal,
+      normal;
   }
 }
 
 @layer base {
   /* Global font settings */
   body {
-    font-family: 'Black Freedom', sans-serif !important;
+    font-family: 'Proxima Nova', sans-serif !important;
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale !important;
   }
 
   /* Safari-specific font settings for mobile only */
   @supports (-webkit-touch-callout: none) {
-    @media not all and (min-resolution: .001dpcm) {
+    @media not all and (min-resolution: 0.001dpcm) {
       @media (max-width: 767px) {
-        body {
-          font-family: 'American Typewriter', serif !important;
-        }
+        /* Mobile Safari specific styles if needed */
       }
     }
   }
-  
+
   /* Mobile font settings */
   @media (max-width: 767px) {
-    body {
-      font-family: 'American Typewriter', serif !important;
+    h1,
+    h2,
+    h5,
+    h6 {
+      font-family: 'Peristiwa', sans-serif !important;
     }
-    
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'American Typewriter', serif !important;
+
+    h3 {
+      font-family: 'Proxima Nova', sans-serif !important;
     }
-    
+
+    h4 {
+      font-family: 'Proxima Nova', sans-serif !important;
+    }
+
     .nav-text {
-      font-family: 'American Typewriter', serif !important;
+      font-family: 'Proxima Nova', sans-serif !important;
     }
   }
 }

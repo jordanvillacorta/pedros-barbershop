@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Award, Users, Scissors, Trophy } from 'lucide-react';
 import ScrollReveal from '../components/animations/ScrollReveal';
@@ -60,13 +60,17 @@ const cardVariants = {
 };
 
 export default function AboutUsPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="pt-16 lg:pt-0 bg-marble min-h-screen">
       <div className="container mx-auto px-4 py-20">
         <ScrollReveal variant="fade" className="max-w-6xl mx-auto mb-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <ScrollReveal variant="slide" className="relative">
-              <div className="aspect-square overflow-hidden rounded-lg border-4 border-pr-red">
+              <div className="aspect-square overflow-hidden rounded-lg border-4 border-pr-white">
                 <img
                   src="https://github.com/jordanvillacorta/pedros-barbershop/blob/master/images/pedro_about_us.JPG?raw=true"
                   alt="Pedro Angel"
@@ -80,7 +84,7 @@ export default function AboutUsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="text-4xl md:text-5xl font-black-freedom text-pr-white mb-6"
+                className="text-4xl md:text-5xl font-peristiwa text-pr-white mb-6"
               >
                 Meet Pedro Angel
               </motion.h1>
@@ -131,8 +135,7 @@ export default function AboutUsPage() {
             
             {/* Timeline Events */}
             <div className="space-y-20">
-              {timelineEvents.map((event, index) => {
-                return (
+              {timelineEvents.map((event, index) => (
                 <div
                   key={index}
                   className={`relative flex items-center flex-col md:flex-row ${
@@ -153,14 +156,14 @@ export default function AboutUsPage() {
                   >
                     <div className={`bg-card p-6 rounded-lg shadow-lg mx-4 ${
                       index % 2 === 0 ? 'md:ml-12 mt-6 md:mt-0' : 'md:mr-12 mt-6 md:mt-0'
-                    }`}>
+                    }`} style={{ backgroundColor: '#004687' }}>
                       <div className="text-pr-red font-bold text-xl mb-2">{event.year}</div>
                       <h3 className="text-pr-white text-xl mb-2">{event.title}</h3>
                       <p className="text-gray-400">{event.description}</p>
                     </div>
                   </motion.div>
                 </div>
-              )})}
+              ))}
             </div>
           </div>
         </div>

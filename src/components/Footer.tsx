@@ -21,6 +21,7 @@ export default function Footer() {
               <Phone className="w-5 h-5 mr-2 text-pr-red" />
               <a
                 href="tel:+19138398588"
+                aria-label="Call us at (913) 839-8588"
                 className="hover:text-pr-red transition duration-300"
               >
                 (913) 839-8588
@@ -29,6 +30,7 @@ export default function Footer() {
             <a
               href={mapsUrl}
               target="_blank"
+              aria-label="Open our location in Google Maps"
               rel="noopener noreferrer"
               className="flex items-center hover:text-pr-red transition duration-300"
             >
@@ -48,6 +50,7 @@ export default function Footer() {
             <a
               href="https://www.facebook.com/Yourpuertoricanbarberinkc/"
               target="_blank"
+              aria-label="Visit our Facebook page"
               rel="noopener noreferrer"
               className="flex items-center text-white hover:text-pr-red transition duration-300"
             >
@@ -57,6 +60,7 @@ export default function Footer() {
             <a
               href="https://www.instagram.com/yourpuertoricanbarberinkc"
               target="_blank"
+              aria-label="Visit our Instagram profile"
               rel="noopener noreferrer"
               className="flex items-center text-white hover:text-pr-red transition duration-300"
             >

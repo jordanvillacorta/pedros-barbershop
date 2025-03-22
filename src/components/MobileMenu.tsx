@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Home, Users, Image } from 'lucide-react';
-import { Clippers } from './icons/Clippers';
+import { Home, Users, Image } from 'lucide-react'; 
+import { GiRazor } from 'react-icons/gi';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -45,7 +45,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             onClick={onClose}
           />
           <motion.div 
-            className="fixed inset-y-0 right-0 w-3/4 max-w-[250px] bg-marble px-6 py-6 shadow-lg"
+            className="fixed inset-y-0 right-0 w-3/4 max-w-[250px] bg-black px-6 py-6 shadow-lg"
             variants={menuVariants}
             initial="closed"
             animate="open"
@@ -79,7 +79,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               `text-pr-white hover:text-pr-red transition duration-300 text-2xl flex items-center gap-3 ${isActive ? 'text-pr-red' : ''}`
             }
           >
-            <Clippers className="w-6 h-6" />
+            <GiRazor className="w-6 h-6 scale-x-[-1]" />
             Services
           </NavLink>
           <NavLink 

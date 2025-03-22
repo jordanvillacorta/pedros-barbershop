@@ -70,13 +70,14 @@ export default function Gallery() {
   return (
     <section className="py-20 bg-marble">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-white mb-12 font-black-freedom">Our Work</h2>
+        <h2 className="text-4xl font-bold text-center text-white mb-12 font-peristiwa">Our Work</h2>
         
         <div className="flex justify-center mb-8">
           <div className="relative w-48">
             <select
               value={selectedBarber}
               onChange={(e) => setSelectedBarber(e.target.value as 'all' | 'pedro' | 'jesus')}
+              aria-label="Filter gallery by barber"
               className="w-full px-4 py-2 bg-gray-800 text-white rounded-lg appearance-none cursor-pointer border-2 border-gray-700 hover:border-pr-red transition-colors duration-300 focus:outline-none focus:border-pr-red"
             >
               <option value="all">All Barbers</option>

@@ -17,7 +17,7 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold text-pr-white mb-6 font-black-freedom">Our Services</h2>
+          <h2 className="text-4xl font-bold text-pr-white mb-6 font-peristiwa">Our Services</h2>
           <motion.a 
             href="/barbers"
             className="inline-block bg-pr-red text-pr-white px-8 py-3 rounded-lg font-semibold hover:bg-pr-blue transition-colors duration-300"
@@ -28,19 +28,18 @@ export default function Services() {
             Book A Barber
           </motion.a>
         </motion.div>
-        
+    
         <div className="mb-16">
           <motion.h3
-            className="text-2xl font-bold text-pr-white mb-8 text-center"
+            className="text-3xl md:text-4xl font-bold text-pr-white mb-8 text-center font-peristiwa"
             initial={{ opacity: 0, y: 20 }}
             animate={popularInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            Popular Services
           </motion.h3>
           <div
             ref={popularRef}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
           >
             {popularServices.map((service, index) => (
               <ServiceCard 
@@ -53,14 +52,14 @@ export default function Services() {
         </div>
 
         <div>
-          <motion.h3
-            className="text-2xl font-bold text-pr-white mb-8 text-center"
+          <motion.h2
+            className="text-3xl md:text-4xl font-bold text-pr-white mb-8 text-center font-peristiwa"
             initial={{ opacity: 0, y: 20 }}
             animate={otherInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
             Additional Services
-          </motion.h3>
+          </motion.h2>
           <div
             ref={otherRef}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
