@@ -42,7 +42,10 @@ export default function Footer() {
           {/* Today's Hours */}
           <div className="flex items-center cursor-pointer" onClick={toggleHoursPopup}>
             <Clock className="w-5 h-5 mr-2 text-pr-red" />
-            <span className="hover:text-pr-red transition-colors duration-300">Today: {currentDayHours.hours}</span>
+            <div className="flex flex-col">
+              <span className="hover:text-pr-red transition-colors duration-300">Today: {currentDayHours.hours}</span>
+              <span className="text-sm text-pr-red hover:text-pr-white transition-colors duration-300 mt-1">See More</span>
+            </div>
           </div>
 
           {/* Social Links */}

@@ -7,9 +7,8 @@ import ParallaxSection from './animations/ParallaxSection';
 
 export default function Hero() {
   const heroImage =
-    'https://d2zdpiztbgorvt.cloudfront.net/region1/us/533995/biz_photo/3376f71fa1ca4e5987abe82454834c-pedro-s-barbershop-biz-photo-f08a7cf45e5549a8b2e8083daa4dd6-booksy.jpeg';
-  const logoImage =
-    'https://github.com/jordanvillacorta/pedros-barbershop/blob/master/images/pedro_20250305_072749_482%202.jpeg?raw=true';
+    'https://github.com/jordanvillacorta/pedros-barbershop/blob/master/images/pedro_background-min.JPG';
+  const logoImage = 'https://d2zdpiztbgorvt.cloudfront.net/region1/us/533995/logo/a6335cb701b346d9a96adfdafd0a51-pedro-s-barbershop-logo-7f2d6777d972410992271a5e2643c9-booksy.jpeg';
 
   return (
     <motion.div
@@ -37,7 +36,7 @@ export default function Hero() {
             `}
             sizes="200px"
             alt="Pedro's Barbershop Logo"
-            className="w-40 h-40 md:w-48 md:h-48 mb-6 rounded-full border-4 border-pr-red"
+            className="w-48 h-48 md:w-64 md:h-64 mb-6 rounded-full"
             loading="eager"
           />
         </ScrollReveal>

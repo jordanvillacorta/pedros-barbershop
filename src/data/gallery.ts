@@ -61,7 +61,7 @@ export const galleryImages = [
     barber: 'jesus',
   },
   {
-    url: 'https://github.com/jordanvillacorta/pedros-barbershop/blob/master/images/jesus/10.jpeg',
+    url: 'https://github.com/jordanvillacorta/pedros-barbershop/blob/master/images/jesus/14.jpeg',
     barber: 'jesus',
   },
   {
