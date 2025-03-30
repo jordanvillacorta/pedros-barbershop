@@ -21,10 +21,10 @@ export default function Navbar({ isOpen, onToggle }: NavbarProps) {
     <>
       {/* Mobile Header */}
       <div className="lg:hidden fixed top-0 left-0 right-0 bg-[#004687] z-50 border-b-2 border-pr-white">
-        <div className="px-4 py-6 flex items-center justify-between">
-          <NavLink to="/" className="flex items-center gap-3">
+        <div className="px-4 py-6 flex items-center justify-around">
+          <NavLink to="/" className="flex items-center gap-4">
             <BarberPole className="w-10 h-10 text-pr-red" />
-            <span className="text-pr-white text-3xl font-peristiwa truncate">Pedro's Barbershop</span>
+            <span className="text-pr-white text-4xl font-peristiwa truncate" style={{ textShadow: '-1px -1px 0 #ED0000, 1px -1px 0 #ED0000, -1px 1px 0 #ED0000, 1px 1px 0 #ED0000' }}>Pedro's Barbershop</span>
           </NavLink>
           <button
             className="text-pr-white hover:text-pr-red transition duration-300"
