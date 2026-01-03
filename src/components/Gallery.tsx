@@ -24,7 +24,7 @@ interface ImageState {
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [selectedBarber, setSelectedBarber] = useState<'all' | 'pedro' | 'jesus'>('all');
+  const [selectedBarber, setSelectedBarber] = useState<'all' | 'pedro' | 'jesus' | 'jerimyah'>('all');
   const [imageStates, setImageStates] = useState<Record<string, ImageState>>({});
 
   const filteredImages = useMemo(() => {
@@ -76,13 +76,14 @@ export default function Gallery() {
           <div className="relative w-48">
             <select
               value={selectedBarber}
-              onChange={(e) => setSelectedBarber(e.target.value as 'all' | 'pedro' | 'jesus')}
+              onChange={(e) => setSelectedBarber(e.target.value as 'all' | 'pedro' | 'jesus' | 'jerimyah')}
               aria-label="Filter gallery by barber"
               className="w-full px-4 py-2 bg-gray-800 text-white rounded-lg appearance-none cursor-pointer border-2 border-gray-700 hover:border-pr-red transition-colors duration-300 focus:outline-none focus:border-pr-red"
             >
               <option value="all">All Barbers</option>
               <option value="pedro">Pedro</option>
               <option value="jesus">Jesus</option>
+              <option value="jerimyah">Jerimyah</option>
             </select>
             <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-pr-red pointer-events-none w-5 h-5" />
           </div>

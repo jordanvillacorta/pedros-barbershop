@@ -31,7 +31,7 @@ export default function BarberCard({ barber, index }: BarberCardProps) {
       viewport={{ once: true, margin: "-100px" }}
       custom={index}
     >
-      <div className="aspect-square overflow-hidden">
+      <div className="overflow-hidden">
         <img
           src={getImageUrl(barber.image, 400)}
           srcSet={`
@@ -40,7 +40,7 @@ export default function BarberCard({ barber, index }: BarberCardProps) {
           `}
           sizes="(max-width: 768px) 100vw, 50vw"
           alt={barber.name}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain"
           loading="lazy"
           decoding="async"
         />
