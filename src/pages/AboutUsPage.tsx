@@ -30,8 +30,8 @@ const timelineEvents = [
   },
   {
     year: '2022',
-    title: 'Team Expansion',
-    description: 'Welcomed talented barbers, notably Jesus Silva, to meet growing demand while maintaining our high standards.',
+    title: 'Team Expansion & Partnership',
+    description: 'Welcomed talented barbers, notably Jesus Silva, to meet growing demand while maintaining our high standards. Partnered with L3VEL3 as authorized dealers of their hair products.',
     icon: <Users />
   },
   {

@@ -20,11 +20,11 @@ export default function Footer() {
             <div className="flex items-center">
               <Phone className="w-5 h-5 mr-2 text-pr-red" />
               <a
-                href="tel:+19138398588"
-                aria-label="Call us at (913) 839-8588"
+                href="tel:+19133545998"
+                aria-label="Call us at (913)354-5998"
                 className="hover:text-pr-red transition duration-300"
               >
-                (913) 839-8588
+                (913)-354-5998
               </a>
             </div>
             <a
@@ -61,7 +61,7 @@ export default function Footer() {
               <span className="hidden sm:inline">Facebook</span>
             </a>
             <a
-              href="https://www.instagram.com/yourpuertoricanbarberinkc"
+              href="https://www.instagram.com/pedros.barbershop.in.olathe/"
               target="_blank"
               aria-label="Visit our Instagram profile"
               rel="noopener noreferrer"
